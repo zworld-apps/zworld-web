@@ -1,9 +1,6 @@
 ############################ Default configuration #########################
 baseURL = "https://fierce-badlands-03196.herokuapp.com/"
-<<<<<<< HEAD
 baseurl = "https://fierce-badlands-03196.herokuapp.com/"
-=======
->>>>>>> afe844e09213ee83583c88a0278da1877ba8ad94
 languageCode = "en-us"
 # site title 
 title = "zworld"
