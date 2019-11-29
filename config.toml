@@ -1,11 +1,11 @@
 ############################ Default configuration #########################
-baseURL = "http://192.168.100.17:1313/"
-bind = "192.168.100.17"
+baseURL = "https://fierce-badlands-03196.herokuapp.com/"
+baseurl = "https://fierce-badlands-03196.herokuapp.com/"
 languageCode = "en-us"
 # site title 
 title = "zworld"
 # theme
-theme = "northendlab-hugo"
+theme = "northendlab-dark"
 # post pagination
 paginate = "5"
 # post excerpt
@@ -91,7 +91,7 @@ icon = "ti-twitter-alt" # themify icon pack https://themify.me/themify-icons
 link = "#"
 [[params.social]]
 icon = "ti-github" # themify icon pack https://themify.me/themify-icons
-link = "http://github.com/xzebra/"
+link = "http://github.com/zworld-apps/"
 [[params.social]]
 icon = "ti-linkedin" # themify icon pack https://themify.me/themify-icons
 link = "#"
