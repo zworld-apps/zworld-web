@@ -23,17 +23,6 @@
   }
 }
 
-.navbar-dark .navbar-nav .nav-link {
-  color: $text-color-dark !important;
-  &:hover{
-    color: $primary-color;
-  }
-}
-
-.navbar-dark i {
-  color: $text-color-dark !important;
-}
-
 .navbar-expand-lg .navbar-nav .nav-link {
   padding: 20px;
 }
