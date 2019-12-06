@@ -1,9 +1,10 @@
 package main
 
 import (
-    "context"
+	"context"
+	"errors"
 
-    "github.com/google/go-github/github"
+	"github.com/google/go-github/github"
 )
 
 func GetLatestRelease() (*github.RepositoryRelease, error) {
@@ -33,4 +34,14 @@ func GetReleaseList() ([]*github.RepositoryRelease, error) {
 		"xzebra", "zworld-client", nil)
 
 	return releases, err
+}
+
+func GetDownloadURL(id int64) (string, error) {
+	ctx := context.Background()
+	_, redirect, err := client.Repositories.DownloadReleaseAsset(ctx,
+		"xzebra", "zworld-client", id)
+	if redirect == "" && err == nil {
+		err = errors.New("couldn't get download url")
+	}
+	return redirect, err
 }

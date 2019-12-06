@@ -1,19 +1,19 @@
 package main
 
 import (
+	"context"
 	"fmt"
-	"os"
-    "strings"
-    "context"
+	"io"
 	"net/http"
-    "encoding/json"
-    "path/filepath"
+	"os"
+	"path/filepath"
+	"strings"
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 
-    "github.com/google/go-github/github"
-    "golang.org/x/oauth2"
+	"github.com/google/go-github/github"
+	"golang.org/x/oauth2"
 )
 
 var client *github.Client
@@ -28,12 +28,12 @@ func initGithubClient() {
 }
 
 func getPort() (port string) {
-    port = os.Getenv("PORT")
-    if port == "" {
-        port = "8080"
-        fmt.Println("No port variable detected, setting to", port)
-    }
-    return ":" + port
+	port = os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+		fmt.Println("No port variable detected, setting to", port)
+	}
+	return ":" + port
 }
 
 // Got from https://github.com/go-chi/chi/blob/master/_examples/fileserver/main.go
@@ -54,48 +54,39 @@ func FileServer(router *chi.Mux, path string, root http.FileSystem) {
 	path += "*"
 
 	router.Get(path, http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-        if _, err := os.Stat(fmt.Sprintf("%s%s", root, r.RequestURI)); os.IsNotExist(err) {
-            router.NotFoundHandler().ServeHTTP(w, r)
-        } else {
-            fs.ServeHTTP(w, r)
-        }
+		if _, err := os.Stat(fmt.Sprintf("%s%s", root, r.RequestURI)); os.IsNotExist(err) {
+			router.NotFoundHandler().ServeHTTP(w, r)
+		} else {
+			fs.ServeHTTP(w, r)
+		}
 	}))
 }
 
-func apiRouter() *chi.Mux {
-    router := chi.NewRouter()
-    router.NotFound(func(w http.ResponseWriter, r *http.Request) {
-        resp, err := json.Marshal(RespError{Code: 404, Desc: "Not Found"})
-        if err != nil { panic(err) }
-        w.Write(resp)
-    })
-    router.Get("/version", GameVersion)
-    router.Get("/releases", AllReleases)
-    router.Get("/releases/latest", LatestRelease)
-    router.Get("/releases/{version}", CustomRelease)
-
-    return router
+func ServeZIP(w http.ResponseWriter, file io.ReadCloser) error {
+	w.Header().Set("Content-Type", "application/zip")
+	_, err := io.Copy(w, file)
+	return err
 }
 
 func main() {
-    initGithubClient()
+	initGithubClient()
 
-    router := chi.NewRouter()
-    router.Use(middleware.Recoverer)
-    router.Use(middleware.Logger)
+	router := chi.NewRouter()
+	router.Use(middleware.Recoverer)
+	router.Use(middleware.Logger)
 
-    router.NotFound(func(w http.ResponseWriter, r *http.Request) {
-        http.ServeFile(w, r, "public/404.html")
-    })
+	router.NotFound(func(w http.ResponseWriter, r *http.Request) {
+		http.ServeFile(w, r, "public/404.html")
+	})
 
-    router.Mount("/api", apiRouter())
+	router.Mount("/api/v1", apiV1Router())
+	router.Mount("/api", apiV1Router())
 
-    workDir, _ := os.Getwd()
-    publicDir := filepath.Join(workDir, "public")
-    FileServer(router, "/", http.Dir(publicDir))
+	workDir, _ := os.Getwd()
+	publicDir := filepath.Join(workDir, "public")
+	FileServer(router, "/", http.Dir(publicDir))
 
-    port := getPort()
-    fmt.Println("Server listening at", port)
-    http.ListenAndServe(port, router)
+	port := getPort()
+	fmt.Println("Server listening at", port)
+	http.ListenAndServe(port, router)
 }
-
