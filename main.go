@@ -3,11 +3,9 @@ package main
 import (
 	"context"
 	"fmt"
-	"io"
 	"net/http"
 	"os"
 	"path/filepath"
-	"strings"
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
@@ -36,36 +34,8 @@ func getPort() (port string) {
 	return ":" + port
 }
 
-// Got from https://github.com/go-chi/chi/blob/master/_examples/fileserver/main.go
-//
-// FileServer conveniently sets up a http.FileServer handler to serve
-// static files from a http.FileSystem.
-func FileServer(router *chi.Mux, path string, root http.FileSystem) {
-	if strings.ContainsAny(path, "{}*") {
-		panic("FileServer does not permit URL parameters.")
-	}
-
-	fs := http.StripPrefix(path, http.FileServer(root))
-
-	if path != "/" && path[len(path)-1] != '/' {
-		router.Get(path, http.RedirectHandler(path+"/", 301).ServeHTTP)
-		path += "/"
-	}
-	path += "*"
-
-	router.Get(path, http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		if _, err := os.Stat(fmt.Sprintf("%s%s", root, r.RequestURI)); os.IsNotExist(err) {
-			router.NotFoundHandler().ServeHTTP(w, r)
-		} else {
-			fs.ServeHTTP(w, r)
-		}
-	}))
-}
-
-func ServeZIP(w http.ResponseWriter, file io.ReadCloser) error {
-	w.Header().Set("Content-Type", "application/zip")
-	_, err := io.Copy(w, file)
-	return err
+func HandleNotFound(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "public/404.html")
 }
 
 func main() {
@@ -75,16 +45,14 @@ func main() {
 	router.Use(middleware.Recoverer)
 	router.Use(middleware.Logger)
 
-	router.NotFound(func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "public/404.html")
-	})
+	router.NotFound(HandleNotFound)
 
 	router.Mount("/api/v1", apiV1Router())
 	router.Mount("/api", apiV1Router())
 
 	workDir, _ := os.Getwd()
 	publicDir := filepath.Join(workDir, "public")
-	FileServer(router, "/", http.Dir(publicDir))
+	FileServer(router, "/", publicDir)
 
 	port := getPort()
 	fmt.Println("Server listening at", port)
