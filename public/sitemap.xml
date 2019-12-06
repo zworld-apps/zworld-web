@@ -13,7 +13,17 @@
   </url>
   
   <url>
-    <loc>/my-awesome-blog-post/</loc>
+    <loc>/version-0.7.6/</loc>
+    <lastmod>2019-11-07T05:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/version-0.7.7/</loc>
+    <lastmod>2019-11-07T05:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/version-0.7.8/</loc>
     <lastmod>2019-11-07T05:00:00+00:00</lastmod>
   </url>
   
@@ -24,6 +34,11 @@
   
   <url>
     <loc>/contact/</loc>
+    <lastmod>2019-07-06T15:27:17+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/releases/</loc>
     <lastmod>2019-07-06T15:27:17+06:00</lastmod>
   </url>
   

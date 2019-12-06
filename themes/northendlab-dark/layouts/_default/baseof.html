@@ -8,5 +8,8 @@
         {{- block "main" . }}
         {{- end }}
         {{- partial "footer.html" . -}}
+        {{ "<!-- Side Scripts -->" | safeHTML }}
+        {{- block "sidescripts" . -}}
+        {{- end -}}
     </body>
 </html>

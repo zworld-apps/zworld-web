@@ -46,8 +46,8 @@ name = "Contact"
 weight = 1
 
 [[menu.main]]
-URL = "downloads"
-name = "Downloads"
+URL = "releases"
+name = "Releases"
 weight = 2
 
 ######################### Default Parameters ###########################

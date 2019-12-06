@@ -2,7 +2,6 @@
 .btn {
   font-size: 16px;
   font-family: $primary-font;
-  text-transform: capitalize;
   padding: 12px 20px;
   border-radius: 5px;
   border: 1px solid;
@@ -21,6 +20,10 @@
 .btn-sm{
   font-size: 15px;
   padding: 6px 10px;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 .btn-primary {
