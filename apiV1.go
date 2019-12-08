@@ -25,6 +25,7 @@ func (rr RespError) Render(w http.ResponseWriter, r *http.Request) error {
 type RespRelease struct {
 	TagName string      `json:"tag_name"`
 	Name    string      `json:"name"`
+	Date    string      `json:"release_date"`
 	Body    string      `json:"body"`
 	Assets  []RespAsset `json:"assets"`
 }
@@ -34,6 +35,7 @@ func NewRespRelease(release *github.RepositoryRelease) RespRelease {
 	releaseData := RespRelease{
 		TagName: release.GetTagName(),
 		Name:    release.GetName(),
+		Date:    release.GetPublishedAt().Format("02 January 2006"),
 		Body:    release.GetBody(),
 	}
 
