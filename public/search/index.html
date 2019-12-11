@@ -84,7 +84,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
-        <h2>Search result for
+        <h2 class="mb-4">Search result for
           <span class="text-primary">
             <script>
               var str = (window.location.search).substr(3);
@@ -93,14 +93,16 @@
             </script>
           </span>
         </h2>
-        <div class="block shadow">
+        <div class="bg-dark block shadow">
           <div id="search-results"></div>
           <script id="search-result-template" type="text/x-js-template">
-            <div class="bg-dark py-4 border-bottom" id="summary-${key}">
-              <h4><a href="${link}">${title}</a></h4>
+            <div class="mb-5 border-bottom" id="summary-${key}">
+              <h2 class="h4"><a class="text-light" href="${link}">${title}</a></h2>
+                <div class="mb-3">
+                    ${ isset categories }<span>categories: ${categories} </span>${ end }
+                    ${ isset tags }<span>tags: ${tags}</span>${ end }
+                </div>
               <p>${snippet}</p>
-              ${ isset tags }<p>Tags: ${tags}</p>${ end }
-              ${ isset categories }<p>Categories: ${categories}</p>${ end }
             </div>
         </script>
         </div>
