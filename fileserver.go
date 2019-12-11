@@ -75,6 +75,7 @@ func FileServer(router *chi.Mux, path string, root string) {
 		},
 	))
 
+	// redirect to / terminated urls
 	if path != "/" && path[len(path)-1] != '/' {
 		router.Get(path, http.RedirectHandler(path+"/", 301).ServeHTTP)
 		path += "/"
@@ -82,6 +83,13 @@ func FileServer(router *chi.Mux, path string, root string) {
 	path += "*"
 
 	router.Get(path, http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		// check if url has GET parameters
+		if strings.Contains(r.RequestURI, "?") {
+			// trim parameters as server is not gonna parse them
+			r.RequestURI = r.RequestURI[:strings.LastIndex(r.RequestURI, "?")]
+			fmt.Println(r.RequestURI)
+		}
+
 		info, err := os.Stat(fmt.Sprintf("%s%s", root, r.RequestURI))
 		if err == nil && info.IsDir() {
 			_, err = os.Stat(fmt.Sprintf("%s%s/index.html", root, r.RequestURI))
