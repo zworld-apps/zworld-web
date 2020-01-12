@@ -1,10 +1,10 @@
 +++
-title = "My awesome blog post"
+title = "Local item data"
 image = "/images/post/post-1.jpg"
 author = "Zebra"
 date = 2019-11-07T05:00:00Z
-description = "This is meta description"
-categories = ["Clothes"]
+description = "Item info stored locally. No need to update the whole game to modify items."
+categories = ["Version", "0.7.6"]
 type = "post"
 
 +++

@@ -1,7 +1,7 @@
 +++
 title = "Zebra"
 image = "/images/author/zebra.png"
-description = "Backend developer"
+description = "Zworld Creator"
 
 +++
 

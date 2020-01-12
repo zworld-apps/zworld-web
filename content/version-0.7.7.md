@@ -1,10 +1,10 @@
 +++
-title = "My awesome blog post"
+title = "Improved UI system"
 image = "/images/post/post-1.jpg"
 author = "Zebra"
 date = 2019-11-07T05:00:00Z
-description = "This is meta description"
-categories = ["Clothes"]
+description = "Improved UI system"
+categories = ["Version", "0.7.7"]
 type = "post"
 
 +++
