@@ -12,11 +12,47 @@
     
     
     <item>
-      <title>Clothes</title>
-      <link>/categories/clothes/</link>
+      <title>0.7.6</title>
+      <link>/categories/0.7.6/</link>
       <pubDate>Thu, 07 Nov 2019 05:00:00 +0000</pubDate>
       
-      <guid>/categories/clothes/</guid>
+      <guid>/categories/0.7.6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>0.7.7</title>
+      <link>/categories/0.7.7/</link>
+      <pubDate>Thu, 07 Nov 2019 05:00:00 +0000</pubDate>
+      
+      <guid>/categories/0.7.7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>0.7.8</title>
+      <link>/categories/0.7.8/</link>
+      <pubDate>Thu, 07 Nov 2019 05:00:00 +0000</pubDate>
+      
+      <guid>/categories/0.7.8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hotfix</title>
+      <link>/categories/hotfix/</link>
+      <pubDate>Thu, 07 Nov 2019 05:00:00 +0000</pubDate>
+      
+      <guid>/categories/hotfix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Version</title>
+      <link>/categories/version/</link>
+      <pubDate>Thu, 07 Nov 2019 05:00:00 +0000</pubDate>
+      
+      <guid>/categories/version/</guid>
       <description></description>
     </item>
     

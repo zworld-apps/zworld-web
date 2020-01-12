@@ -3,17 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/categories/0.7.6/</loc>
+    <lastmod>2019-11-07T05:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/0.7.7/</loc>
+    <lastmod>2019-11-07T05:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/0.7.8/</loc>
+    <lastmod>2019-11-07T05:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <lastmod>2019-11-07T05:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/clothes/</loc>
-    <lastmod>2019-11-07T05:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/version-0.7.6/</loc>
+    <loc>/categories/hotfix/</loc>
     <lastmod>2019-11-07T05:00:00+00:00</lastmod>
   </url>
   
@@ -24,6 +34,16 @@
   
   <url>
     <loc>/version-0.7.8/</loc>
+    <lastmod>2019-11-07T05:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/version-0.7.6/</loc>
+    <lastmod>2019-11-07T05:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/version/</loc>
     <lastmod>2019-11-07T05:00:00+00:00</lastmod>
   </url>
   
