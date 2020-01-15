@@ -7,6 +7,8 @@ HUGO_PACKAGE=https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${
 
 TMP_DIR=tmp
 
+pwd
+
 mkdir -p $TMP_DIR
 if ! [ -e $TMP_DIR/$FILE_NAME ]; then
     curl $HUGO_PACKAGE -L -s -o $TMP_DIR/$FILE_NAME
