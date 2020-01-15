@@ -1,2 +1,2 @@
 release: ./bin/release.sh
-web: zworld-web
+web: bin/zworld-web
