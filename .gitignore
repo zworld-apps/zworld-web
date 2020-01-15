@@ -1,4 +1,6 @@
 # ignore generated files
 resources/_gen
+public
 
 zworld-web
+
