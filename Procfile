@@ -1,1 +1,1 @@
-web: zworld-web ../public
+web: zworld-web
