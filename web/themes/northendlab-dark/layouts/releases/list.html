@@ -21,13 +21,12 @@
                 release.name,
                 release.tag_name,
                 release.release_date,
-                release.body,
                 release.assets,
             ));
         })
     })
 
-    function createArticle(title, tag, releaseDate, body, assets) {
+    function createArticle(title, tag, releaseDate, assets) {
         var $article = $([
         "<article class='mb-5'>",
             "<h2 class='h4'>",
@@ -43,9 +42,6 @@
                     "Published on " + releaseDate,
                 "</span>",
             "</div>",
-            "<p>",
-                body,
-            "</p>",
             createDownloads(assets),
         "</article>",
         ].join("\n"));

@@ -58,13 +58,16 @@ home = "Home"
 logo = "images/logo.svg"
 # meta data
 author = "xzebra"
-description = "Zworld's official website"
+description = "zworld is a social multiplayer game under development where you can chat, build, collect and more"
+keywords = "indie,mmo,dev,multiplayer,social,chat,build,2d,pixel,pixelart,game"
 # google analitycs ID
 googleAnalitycsID = "Your ID"
+# google site verification
+googleSiteVerification = "8QbhyuuJYQR1zY-mG3Zh9m68RFKJqboCV1k5zYNOXuo"
 # contact form action
 contactFormAction = "#" # contact form works with : https://formspree.io
 # copyright
-copyright = "&copy; 2019 [Zworld](https://zworld.cf) All Rights Reserved"
+copyright = "&copy; 2019 [Zworld](http://www.zworld.cf) All Rights Reserved"
 
 # preloader
 [params.preloader]
