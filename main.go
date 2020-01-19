@@ -48,7 +48,8 @@ func main() {
 
 	router := chi.NewRouter()
 	router.Use(middleware.Recoverer)
-	router.Use(middleware.Logger)
+	//router.Use(middleware.Logger)
+	router.Use(middleware.DefaultCompress)
 
 	router.NotFound(HandleNotFound)
 
