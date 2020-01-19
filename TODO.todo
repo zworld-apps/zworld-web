@@ -1,11 +1,11 @@
 High priority:
 
 Mid priority:
-    ☐ Post containing images wont resize them (inserted with md, class=img-fluid)
 
 Low priority:
     ☐ Shadow below post column
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+    ✔ Post containing images wont resize them (inserted with md, class=img-fluid) @done(2020-01-19 01:48) @project(Mid priority)
     ✔ Building hugo in heroku @done(2020-01-19 01:33) @project(High priority)
