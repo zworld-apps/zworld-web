@@ -15,6 +15,7 @@ import (
 )
 
 var client *github.Client
+var publicPath = "public"
 
 func initGithubClient() {
 	ctx := context.Background()
@@ -35,15 +36,20 @@ func getPort() (port string) {
 }
 
 func HandleNotFound(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "public/404.html")
+	http.ServeFile(w, r, filepath.Join(publicPath, "404.html"))
 }
 
 func main() {
+    if len(os.Args) == 2 {
+        publicPath = os.Args[1];
+    }
+
 	initGithubClient()
 
 	router := chi.NewRouter()
 	router.Use(middleware.Recoverer)
-	router.Use(middleware.Logger)
+	//router.Use(middleware.Logger)
+	router.Use(middleware.DefaultCompress)
 
 	router.NotFound(HandleNotFound)
 
@@ -51,7 +57,7 @@ func main() {
 	router.Mount("/api", apiV1Router())
 
 	workDir, _ := os.Getwd()
-	publicDir := filepath.Join(workDir, "public")
+	publicDir := filepath.Join(workDir, publicPath)
 	FileServer(router, "/", publicDir)
 
 	port := getPort()

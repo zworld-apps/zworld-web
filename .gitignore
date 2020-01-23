@@ -1,6 +1,8 @@
 # ignore generated files
 resources/_gen
+web/resources/_gen
 public
-
+bin/hugo
+tmp/
 zworld-web
 
