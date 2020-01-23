@@ -1,0 +1,19 @@
+#+STARTUP: content
+#+HUGO_BASE_DIR: ..
+#+HUGO_AUTO_SET_LASTMOD: t
+
+* Posts
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: .
+:END:
+
+** Version :@version:
+*** 0.7.6 :@0_7_6:
+**** TODO Local item data
+:PROPERTIES:
+:EXPORT_DATE: 2019-11-07
+:EXPORT_FILE_NAME: version-0_7_6
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description "Item info stored locally. No need to update the whole game to modify items."
+:END:
+[[/images/post/post-1.jpg]]
+Dummy text right here.
