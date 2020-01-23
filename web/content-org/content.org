@@ -3,25 +3,49 @@
 #+HUGO_AUTO_SET_LASTMOD: t
 #+AUTHOR:
 
-* Posts
+* Blog
+** Version :@version:
 :PROPERTIES:
-:EXPORT_HUGO_SECTION: .
-:END:
-
-** Version
-:PROPERTIES:
-#+hugo_categories: version
+:EXPORT_HUGO_SECTION: version/
 :END:
 *** 0.7.6
 #+hugo_categories: 0.7.6
 **** DONE Local item data
 :PROPERTIES:
 :EXPORT_DATE: 2019-11-07
-:EXPORT_FILE_NAME: version-0_7_6
+:EXPORT_FILE_NAME: version-0.7.6
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description "Item info stored locally. No need to update the whole game to modify items."
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :author "Zebra"
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :image "/images/post/post-1.jpg"
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :type "post"
 :END:
 [[/images/post/post-1.jpg]]
 Dummy text right here. Some more text.
+*** 0.7.7
+#+hugo_categories: 0.7.7
+**** DONE Improved UI system
+:PROPERTIES:
+:EXPORT_DATE: 2019-11-07
+:EXPORT_FILE_NAME: version-0.7.6
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description "Creating UI components now is easier. Support for themes."
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :author "Zebra"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :type "post"
+:END:
+[[/images/post/post-1.jpg]]
+Dummy text right here. Some more text.
+
+** Hotfixes :@hotfix:
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: hotfixes/
+:END:
+*** 0.7.8
+#+hugo_categories: 0.7.8
+**** DONE Linux updater working
+:PROPERTIES:
+:EXPORT_DATE: 2019-11-07
+:EXPORT_FILE_NAME: version-0.7.8
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description "Linux updater fixed and new keybindings."
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :author "Zebra"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER+: :type "post"
+:END:
+[[/images/post/post-1.jpg]]
+Dummy text right here. Some more text a.
