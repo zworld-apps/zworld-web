@@ -28,7 +28,7 @@
               <a href="{{ "categories/" | relLangURL }}{{ . | urlize | lower }}">{{ . | title | humanize }}</a>
               {{ end }}
             </div>
-            <p>{{.Summary}}</p>
+            <p>{{ .Params.Description }}</p>
             <a href="{{ .Permalink }}" class="btn btn-sm btn-outline-primary capitalize">read more</a>
           </article>
           {{ end }}
