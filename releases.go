@@ -11,7 +11,7 @@ func GetLatestRelease() (*github.RepositoryRelease, error) {
 	ctx := context.Background()
 	// cant use github.GetLatestRelease because it doesnt count pre-releases
 	releases, _, err := client.Repositories.ListReleases(ctx,
-		"xzebra", "zworld-client", nil)
+		"zworld-apps", "zworld-client", nil)
 
 	if err != nil || len(releases) == 0 {
 		return nil, err
@@ -31,7 +31,7 @@ func GetReleaseList() ([]*github.RepositoryRelease, error) {
 	ctx := context.Background()
 	// cant use github.GetLatestRelease because it doesnt count pre-releases
 	releases, _, err := client.Repositories.ListReleases(ctx,
-		"xzebra", "zworld-client", nil)
+		"zworld-apps", "zworld-client", nil)
 
 	return releases, err
 }
@@ -39,7 +39,7 @@ func GetReleaseList() ([]*github.RepositoryRelease, error) {
 func GetDownloadURL(id int64) (string, error) {
 	ctx := context.Background()
 	_, redirect, err := client.Repositories.DownloadReleaseAsset(ctx,
-		"xzebra", "zworld-client", id)
+		"zworld-apps", "zworld-client", id)
 	if redirect == "" && err == nil {
 		err = errors.New("couldn't get download url")
 	}
