@@ -211,7 +211,7 @@
     color: $text-color;
     border-radius: 5px;
     &.active{
-      @extend .shadow;
+      // @extend .shadow;
       color: $white;
       background: $primary-color;
     }
