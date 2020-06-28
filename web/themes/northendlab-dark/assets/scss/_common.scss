@@ -1,6 +1,18 @@
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
   background-color: $body-color;
   overflow-x: hidden;
+}
+
+footer {
+  margin-top: auto;
 }
 
 ::selection {
