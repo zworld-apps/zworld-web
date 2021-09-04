@@ -98,6 +98,7 @@ func FileServer(router *chi.Mux, path string, root string) {
 		if os.IsNotExist(err) {
 			router.NotFoundHandler().ServeHTTP(w, r)
 		} else {
+	        w.Header().Set("Cache-Control", "max-age=3600")
 			fs.ServeHTTP(w, r)
 		}
 	}))

@@ -1,30 +1,13 @@
 <!-- footer -->
 <footer class="py-4 bg-dark">
   <div class="container">
-    <div class="row justify-content-between align-items-center">
-      <div class="col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
-        <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.Logo | relURL }}" class="img-fluid"
-            alt="{{ .Site.Title }}"></a>
-      </div>
-      <div class="col-lg-4 text-center mb-4 mb-lg-0">
-        <ul class="list-inline mb-0">
-          {{ range .Site.Menus.footer }}
-          <li class="list-inline-item"><a class="text-dark d-block p-2" href="{{ .URL | absURL }}">{{ .Name }}</a>
-          </li>
-          {{ end }}
-        </ul>
-      </div>
-      <div class="col-lg-4 text-lg-right text-center mb-4 mb-lg-0">
-        <ul class="list-inline social-icon mb-0">
+	  <div class="mb-lg-0">
+        <ul class="list-inline social-icon mb-0" style="margin:auto; width:fit-content;">
           {{ range .Site.Params.social }}
-          <li class="list-inline-item"><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
+          <li class="list-inline-item ml-4 mr-4"><a href="{{ .link | safeURL }}"><i class="{{ .icon }}"></i></a></li>
           {{ end }}
         </ul>
-      </div>
-      <div class="col-12 text-center mt-4">
-        <span>{{ .Site.Params.footer.copyright | markdownify }}</span>
-      </div>
-    </div>
+	  </div>
   </div>
 </footer>
 <!-- /footer -->
