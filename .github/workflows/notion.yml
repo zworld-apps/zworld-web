@@ -1,5 +1,6 @@
 name: Notion2Github
 on:
+  pull_request:
   schedule:
     - cron: "0 0 * * *" # daily
   workflow_dispatch:
