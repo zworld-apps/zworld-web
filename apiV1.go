@@ -71,8 +71,6 @@ func apiV1Router() *chi.Mux {
 
 	router.Get("/version", GameVersion)
 
-	router.Get("/login", ServerLogin)
-
 	router.Get("/releases", AllReleases)
 	router.Get("/releases/latest", LatestRelease)
 	router.Get("/releases/{version}", CustomRelease)
@@ -89,11 +87,6 @@ func GameVersion(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	fmt.Fprint(w, latest.GetTagName())
-}
-
-func ServerLogin(w http.ResponseWriter, r *http.Request) {
-	db.
-		fmt.Fprint(w, latest.GetTagName())
 }
 
 func AllReleases(w http.ResponseWriter, r *http.Request) {
