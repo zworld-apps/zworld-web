@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"database/sql"
 	"fmt"
 	"net/http"
 	"os"
@@ -17,8 +16,6 @@ import (
 
 var client *github.Client
 var publicPath = "public"
-
-var db *sql.DB
 
 func initGithubClient() {
 	ctx := context.Background()
@@ -48,13 +45,6 @@ func main() {
 	}
 
 	initGithubClient()
-
-	var err error
-	db, err = NewMySQLDatabase()
-	if err != nil {
-		panic(err)
-	}
-	defer db.Close()
 
 	router := chi.NewRouter()
 	router.Use(middleware.Recoverer)
