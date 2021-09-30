@@ -1,5 +1,5 @@
 {{ "<!-- navigation -->" | safeHTML }}
-<header class="fixed-top navigation nav-bg">
+<header class="fixed-top navigation">
   <div class="container">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -36,13 +36,10 @@
         {{ if .Site.Params.search.enable }}
         {{ "<!-- search -->" | safeHTML }}
         <div class="search">
-          <button id="searchOpen" class="search-btn"><i class="text-light ti-search"></i></button>
-          <div class="search-wrapper">
-            <form action="/search" class="h-100">
-              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
-            </form>
-            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
-          </div>
+			<form action="/search" class="h-100">
+				<input class="search-box" id="search-query" name="s" type="search" placeholder="Search words...">
+				<button id="searchOpen" class="search-btn"><i class="text-light ti-search"></i></button>
+			</form>
         </div>
         {{ end }}
       </div>

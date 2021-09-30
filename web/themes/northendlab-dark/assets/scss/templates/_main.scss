@@ -179,6 +179,11 @@
     color: $text-color-dark;
   }
 
+  img {
+    max-width: 100%;
+    height:auto;
+  }
+
 }
 
 /* social icon */
@@ -206,7 +211,7 @@
     color: $text-color;
     border-radius: 5px;
     &.active{
-      @extend .shadow;
+      // @extend .shadow;
       color: $white;
       background: $primary-color;
     }

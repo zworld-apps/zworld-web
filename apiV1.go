@@ -143,7 +143,7 @@ func DownloadRelease(w http.ResponseWriter, r *http.Request) {
 
 	ctx := context.Background()
 	file, redirect, err := client.Repositories.DownloadReleaseAsset(ctx,
-		"xzebra", "zworld-client", id)
+		"zworld-apps", "zworld-client", id)
 	if err != nil {
 		render.Render(w, r, RespError{
 			Code: http.StatusNotFound,
