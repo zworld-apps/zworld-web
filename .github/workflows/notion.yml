@@ -1,4 +1,4 @@
-name: Notion2Github
+name: notion-blog
 on:
   pull_request:
   schedule:
@@ -30,6 +30,6 @@ jobs:
         uses: creyD/prettier_action@v3.1
         with:
           prettier_options: --write ./web/content/**/*.md
-          commit_message: 'docs: Update docs (auto)'
+          commit_message: 'notion: Update articles (auto)'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
