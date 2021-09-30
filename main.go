@@ -40,9 +40,9 @@ func HandleNotFound(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-    if len(os.Args) == 2 {
-        publicPath = os.Args[1];
-    }
+	if len(os.Args) == 2 {
+		publicPath = os.Args[1]
+	}
 
 	initGithubClient()
 

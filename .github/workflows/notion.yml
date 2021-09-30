@@ -1,0 +1,35 @@
+name: notion-blog
+on:
+  pull_request:
+  schedule:
+    - cron: "0 0 * * *" # daily
+  workflow_dispatch:
+jobs:
+  auto-sync-from-notion-to-github:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          # Make sure the actual branch is checked out when running on pull requests
+          ref: ${{ github.head_ref }}
+
+      - name: notion-blog
+        uses: xzebra/notion-blog@master
+        with:
+          database-id: 'f887dfac795547ff97a81bb669b1052f'
+          content-folder: web/content
+          images-folder: web/static/images/posts
+          images-link: /images/posts
+          filter-prop: 'Status'
+          filter-value: 'Finished ✅'
+        env:
+          NOTION_SECRET : ${{ secrets.NOTION_SECRET }}
+
+      - name: Format documents
+        uses: creyD/prettier_action@v3.1
+        with:
+          prettier_options: --write ./web/content/**/*.md
+          commit_message: 'notion: Update articles (auto)'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
