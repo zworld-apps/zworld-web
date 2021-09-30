@@ -2,7 +2,7 @@
 title = "Lighting system"
 date = 2021-09-27
 lastmod = 2021-09-30T10:26:00+07:00
-categories = ["engine" "lights" "visual"]
+categories = ["engine", "lights", "visual"]
 draft = false
 author = "Zebra"
 type = "post"
