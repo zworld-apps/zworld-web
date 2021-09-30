@@ -11,13 +11,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Notion2Github
-        uses: younho9/notion2github@v1.1.0
+      - name: notion-blog
+        uses: xzebra/notion-blog@v0.1
         with:
-          database-url: 'https://www.notion.so/xzebra/f887dfac795547ff97a81bb669b1052f'
-          docs-directory: web/content
+          database-id: 'https://www.notion.so/xzebra/f887dfac795547ff97a81bb669b1052f'
+          content-directory: web/content
+          images-directory: web/static/images/posts
+          images-source: /images/posts
+          filter-prop: 'Status'
+          filter-value: 'Finished ✅'
         env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_SECRET : ${{ secrets.NOTION_SECRET }}
 
       - name: Format documents
         uses: creyD/prettier_action@v3.1
