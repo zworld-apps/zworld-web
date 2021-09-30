@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: notion-blog
-        uses: xzebra/notion-blog@v0.1
+        uses: xzebra/notion-blog@master
         with:
           database-id: 'https://www.notion.so/xzebra/f887dfac795547ff97a81bb669b1052f'
           content-directory: web/content
