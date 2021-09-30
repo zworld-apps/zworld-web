@@ -15,8 +15,8 @@ jobs:
         uses: xzebra/notion-blog@master
         with:
           database-id: 'https://www.notion.so/xzebra/f887dfac795547ff97a81bb669b1052f'
-          content-directory: web/content
-          images-directory: web/static/images/posts
+          content-folder: web/content
+          images-folder: web/static/images/posts
           images-source: /images/posts
           filter-prop: 'Status'
           filter-value: 'Finished ✅'
