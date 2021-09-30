@@ -17,7 +17,7 @@ jobs:
           database-id: 'https://www.notion.so/xzebra/f887dfac795547ff97a81bb669b1052f'
           content-folder: web/content
           images-folder: web/static/images/posts
-          images-source: /images/posts
+          images-link: /images/posts
           filter-prop: 'Status'
           filter-value: 'Finished ✅'
         env:
