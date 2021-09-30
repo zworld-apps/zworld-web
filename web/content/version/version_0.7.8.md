@@ -18,5 +18,5 @@ downloaded by the updater.
 
 In this hotfix, some keybindings were added:
 
--   Toggle display entity names <F2>
--   Zoom without keypad <+/->
+- Toggle display entity names <F2>
+- Zoom without keypad <+/->
