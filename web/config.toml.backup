@@ -1,0 +1,97 @@
+############################ Default configuration #########################
+#baseURL = "https://fierce-badlands-03196.herokuapp.com/"
+baseurl = "/"
+languageCode = "en-us"
+# site title 
+title = "zworld"
+# theme
+theme = "bookworm-light"
+# post pagination
+paginate = "5"
+# post excerpt
+summaryLength = "10"
+# disqus short name
+disqusShortname = "" # get your shortname form here : https://disqus.com
+
+[outputs]
+home = ["HTML", "AMP", "RSS", "JSON"]
+
+########################## Plugings ######################################
+
+# css plugins
+[[params.plugins.css]]
+URL = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+URL = "plugins/themify-icons/themify-icons.css"
+
+# js plugins
+[[params.plugins.js]]
+URL = "plugins/jQuery/jquery.min.js"
+[[params.plugins.js]]
+URL = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+URL = "plugins/search/fuse.min.js"
+[[params.plugins.js]]
+URL = "plugins/search/mark.js"
+[[params.plugins.js]]
+URL = "plugins/search/search.js"
+
+
+########################### Navigation ###################################
+
+# main menu
+[[menu.main]]
+URL = "contact"
+name = "Contact"
+weight = 1
+
+[[menu.main]]
+URL = "releases"
+name = "Releases"
+weight = 2
+
+######################### Default Parameters ###########################
+[params]
+# home
+home = "Home"
+# logo
+logo = "images/logo.svg"
+# meta data
+author = "xzebra"
+description = "zworld is a social multiplayer game under development where you can chat, build, collect and more"
+keywords = "indie,mmo,dev,multiplayer,social,chat,build,2d,pixel,pixelart,game"
+# google analitycs ID
+googleAnalitycsID = "Your ID"
+# google site verification
+googleSiteVerification = "8QbhyuuJYQR1zY-mG3Zh9m68RFKJqboCV1k5zYNOXuo"
+# contact form action
+contactFormAction = "#" # contact form works with : https://formspree.io
+# copyright
+copyright = "&copy; 2019 [Zworld](http://www.zworld.cf) All Rights Reserved"
+
+# preloader
+[params.preloader]
+enable = true
+preloader = "" # use png, jpg, svg or gif format
+
+# search
+[params.search]
+enable = true
+
+
+####################### banner #######################################
+[params.banner]
+bgImage = "images/banner/banner.png"
+title = ""
+
+
+############################## Social Site ##########################
+[[params.social]]
+icon = "ti-facebook" # themify icon pack https://themify.me/themify-icons
+link = "#"
+[[params.social]]
+icon = "ti-twitter-alt" # themify icon pack https://themify.me/themify-icons
+link = "#"
+[[params.social]]
+icon = "ti-github" # themify icon pack https://themify.me/themify-icons
+link = "http://github.com/zworld-apps/"

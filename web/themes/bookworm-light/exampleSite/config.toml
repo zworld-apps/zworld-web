@@ -1,6 +1,6 @@
 ######################## default configuration ####################
-baseURL = "/"
-title = "zworld"
+baseURL = "https://demo.gethugothemes.com/bookworm-light/"
+title = "Bookworm - Personal Blog Template"
 theme = "bookworm-light"
 # post pagination
 paginate = "5"
@@ -9,7 +9,7 @@ summaryLength = "20"
 # google analytics
 googleAnalytics = "" # example : UA-123-45
 # disqus short name
-disqusShortname = "" # get your shortname form here : https://disqus.com
+disqusShortname = "themefisher-template" # get your shortname form here : https://disqus.com
 
 ############################# Modules ##############################
 [module.hugoVersion]
@@ -125,6 +125,11 @@ weight = 3
 name = "Contact"
 url = "contact/"
 weight = 4
+  
+[[menu.main]]
+name = "Buy Premium"
+url = "https://gethugothemes.com/products/bookworm/"
+weight = 5
 
 [[menu.main]]
 weight = 6

@@ -1,12 +1,13 @@
-+++
-title = "Lighting system"
-date = 2021-09-27
+---
+title: "Lighting system"
+image: "images/post/07.jpg"
+date: 2021-01-24T18:19:25+06:00
 lastmod = 2021-09-30T10:26:00+07:00
-categories = ["engine", "lights", "visual"]
-draft = false
-author = "Zebra"
-type = "post"
-+++
+author: "zebra"
+tags: ["Photography"]
+categories: ["Photography"]
+draft: false
+---
 
 Lighting gives games a more professional look. I wanted to introduce a simple lighting system to light blocks and entities. The lighting ideas are mostly based on the game Starbound.
 
