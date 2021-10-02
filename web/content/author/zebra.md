@@ -5,11 +5,10 @@ email: "zebrv.apps@gmail.com"
 date: 2021-02-02T10:20:19+06:00
 draft: false
 social:
-- icon: "la-github"
+- icon: "lab la-github"
   link: "https://github.com/xzebra"
 ---
 
-Maecenas sit amet purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget ipsum elementum venenatis.
+Creator and currently solo-developer of zworld.
 
-Purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget ipsum elementum venenatis.
-
+Student of Computer Science at University of Zaragoza (🇪🇸). Golang developer.
