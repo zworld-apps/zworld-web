@@ -21,8 +21,13 @@ jobs:
           content-folder: web/content
           images-folder: web/static/images/posts
           images-link: /images/posts
+          archetype-file: web/themes/bookworm-light/archetypes/blog.md
+          property-description: "Description"
+          property-tags: "Tags"
+          property-categories: "Categories"
           filter-prop: 'Status'
           filter-value: 'Finished ✅'
+          published-value: 'Published 🖨'
         env:
           NOTION_SECRET : ${{ secrets.NOTION_SECRET }}
 
