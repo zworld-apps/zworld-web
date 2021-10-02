@@ -1,11 +1,12 @@
 ---
-title: "Lighting system"
-image: "images/post/07.jpg"
-date: 2021-01-24T18:19:25+06:00
-lastmod = 2021-09-30T10:26:00+07:00
-author: "zebra"
-tags: ["Photography"]
-categories: ["Photography"]
+title: "Lighting system" 
+description: "Very simple lighting system with __low graphics knowledge__ to give **zworld** a more interesting look."
+image: ""
+date: 2021-09-27T18:24:00+07:00
+lastmod: 2021-10-02T09:22:00+07:00
+author: "Zebra"
+tags: ["engine","lights","visual"]
+categories: ["articles"]
 draft: false
 ---
 
@@ -34,6 +35,7 @@ This effect looked blocky at first, because the texture I was drawing the lights
 So I came up with the solution of relying on the GPU again. When you resize a texture, you can do it with a *nearest neighbour* mode to keep the pixel-ness of the texture, but it can also be used the opposite way. One of the best ways to get a very neat blur on a texture is by scaling it with a *linear* mode. 
 
 1. Make sure to enable clamp mode when you resize the texture, or there could be artifacts on the drawing.
+
 Once I came up with this, I changed the light map texture size to be 1 tile - 1 pixel. That way, when being resized, the lights will smooth themselves and we would use less resources to keep the texture stored and draw into it. The result is the way I expected lights to be.
 
 ![](/images/posts/6ECF2468-F1CC-4C59-B9E6-0651CBE0D2F6.png)

@@ -1,17 +1,20 @@
 ---
 title: "About"
 layout: "about"
-image: "images/about.jpg"
+image: "images/banner.png"
 draft: false
 
 #caption
 caption:
   enable: true
-  title: "I’m Henara Colii, A content writer based in LDN, currently at Bookworm."
+  title: "Welcome to **zworld** 🎉"
+
+# description = "zworld is a social multiplayer game under development where you can chat, build, collect and more"
+#keywords = "indie,mmo,dev,multiplayer,social,chat,build,2d,pixel,pixelart,game"
 
 # social
 social:
-  enable: true
+  enable: false
   social_links:
   - link: "https://www.facebook.com/"
     icon: "lab la-facebook-f"
@@ -27,22 +30,21 @@ social:
 
 # what_i_do
 what_i_do:
-  title: "What I Do"
+  title: "What you can do"
   enable: true
   item:
-  - title: "Content Writing"
-    icon: "las la-pen-nib"
-    description: "Purus eget ipsum elementum venenatis, quis rutrum mi semper nonpurus eget ipsum elementum venenatis."
+  - title: "Build"
+    icon: "las la-hard-hat"
+    description: "Create a house, live in a cave... you can make all types of buildings. Even pixelarts!"
     
-  - title: "Photography"
-    icon: "las la-camera"
-    description: "Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget ipsum elementum venenatis."
+  - title: "Chat"
+    icon: "las la-comments"
+    description: "Chat with your friends about your new build, your clothes or how was your day."
     
-  - title: "Web Research"
-    icon: "lar la-snowflake"
-    description: "Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget ipsum elementum venenatis."
+  - title: "Explore"
+    icon: "lar la-compass"
+    description: "Join other worlds, adopt some animals... You can do whatever you want!"
  
 ---
-A content writer with over 12 years experience working across brand identity, publishing and digital products. Maecenas sit amet purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget.
 
-Purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget ipsum elementum venenatis.
+zworld is a social multiplayer game under development where you can chat, build, collect and more. Read the blog to stay tuned for new changes!

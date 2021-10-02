@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "/"
+baseURL = "https://zworld-web.herokuapp.com/"
 title = "zworld"
 theme = "bookworm-light"
 # post pagination
@@ -65,11 +65,11 @@ black = "#000000"
 dark = "#152035"
 gray = "#747577"
 light = "#FAFAFA"
-color_primary = "#01AD9F"
+color_primary = "#3399D9"
 
 #################### default parameters ################################
 [params]
-logo = "images/logo.png"
+logo = "images/favicon.png"
 logo_height = "35px"
 favicon = "images/favicon.png"
 # Meta data
@@ -82,7 +82,7 @@ search = true
 # main section
 mainSections = ["blog"]
 # copyright
-copyright = "Designed & Developed By [Gethugothemes](https://gethugothemes.com/)"
+copyright = "Made with ❤ by [Zebra](https://github.com/xzebra)"
 
 # Preloader
 [params.preloader]
@@ -97,7 +97,7 @@ access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1Nmpx
 
 # Subscription
 [params.subscription]
-enable = true
+enable = false
 # mailchimp subsciption
 mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
 mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this code with yours
@@ -127,46 +127,9 @@ url = "contact/"
 weight = 4
 
 [[menu.main]]
-weight = 6
-url = "#"
-name = "Pages"
-hasChildren = true
-
-  [[menu.main]]
-  parent = "Pages"
-  name = "Author"
-  url = "author/"
-  weight = 1
-  
-  [[menu.main]]
-  parent = "Pages"
-  name = "Tags"
-  url = "tags/"
-  weight = 2
-  
-  [[menu.main]]
-  parent = "Pages"
-  name = "Category"
-  url = "categories/"
-  weight = 3
-  
-  [[menu.main]]
-  parent = "Pages"
-  name = "Elements"
-  weight = 4
-  url = "elements/"
-  
-  [[menu.main]]
-  parent = "Pages"
-  name = "Privacy"
-  url = "privacy/"
-  weight = 5
-  
-  [[menu.main]]
-  parent = "Pages"
-  name = "Terms & Conditions"
-  url = "terms-conditions/"
-  weight = 6
+name = "Download"
+url = "download/"
+weight = 5
 
 ############################# Footer Menu ########################
 [[menu.footer]]
@@ -180,13 +143,13 @@ url = "author/"
 weight = 2
 
 [[menu.footer]]
-name = "Privacy"
-url = "privacy/"
+name = "Categories"
+url = "categories/"
 weight = 3
 
 [[menu.footer]]
-name = "Terms & Conditions"
-url = "terms-conditions/"
+name = "Tags"
+url = "tags/"
 weight = 4
 
 # Social Icons
