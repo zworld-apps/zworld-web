@@ -1,6 +1,5 @@
 ---
-title: "About"
-layout: "about"
+title: "zworld"
 image: "images/banner.png"
 draft: false
 
