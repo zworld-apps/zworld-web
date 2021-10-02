@@ -1,6 +1,6 @@
 ######################## default configuration ####################
-baseURL = "https://zworld-web.herokuapp.com/"
-title = "zworld"
+baseURL = "https://demo.gethugothemes.com/bookworm-light/"
+title = "Bookworm - Personal Blog Template"
 theme = "bookworm-light"
 # post pagination
 paginate = "5"
@@ -9,7 +9,7 @@ summaryLength = "20"
 # google analytics
 googleAnalytics = "" # example : UA-123-45
 # disqus short name
-disqusShortname = "" # get your shortname form here : https://disqus.com
+disqusShortname = "themefisher-template" # get your shortname form here : https://disqus.com
 
 ############################# Modules ##############################
 [module.hugoVersion]
@@ -65,11 +65,11 @@ black = "#000000"
 dark = "#152035"
 gray = "#747577"
 light = "#FAFAFA"
-color_primary = "#3399D9"
+color_primary = "#01AD9F"
 
 #################### default parameters ################################
 [params]
-logo = "images/favicon.png"
+logo = "images/logo.png"
 logo_height = "35px"
 favicon = "images/favicon.png"
 # Meta data
@@ -82,7 +82,7 @@ search = true
 # main section
 mainSections = ["blog"]
 # copyright
-copyright = "Made with ❤ by [Zebra](https://github.com/xzebra)"
+copyright = "Designed & Developed By [Gethugothemes](https://gethugothemes.com/)"
 
 # Preloader
 [params.preloader]
@@ -97,7 +97,7 @@ access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1Nmpx
 
 # Subscription
 [params.subscription]
-enable = false
+enable = true
 # mailchimp subsciption
 mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
 mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this code with yours
@@ -117,19 +117,61 @@ url = "/"
 weight = 1
   
 [[menu.main]]
-name = "Blog"
-url = "blog/"
+name = "About"
+url = "about/"
 weight = 3
   
 [[menu.main]]
 name = "Contact"
 url = "contact/"
 weight = 4
+  
+[[menu.main]]
+name = "Buy Premium"
+url = "https://gethugothemes.com/products/bookworm/"
+weight = 5
 
 [[menu.main]]
-name = "Download"
-url = "download/"
-weight = 5
+weight = 6
+url = "#"
+name = "Pages"
+hasChildren = true
+
+  [[menu.main]]
+  parent = "Pages"
+  name = "Author"
+  url = "author/"
+  weight = 1
+  
+  [[menu.main]]
+  parent = "Pages"
+  name = "Tags"
+  url = "tags/"
+  weight = 2
+  
+  [[menu.main]]
+  parent = "Pages"
+  name = "Category"
+  url = "categories/"
+  weight = 3
+  
+  [[menu.main]]
+  parent = "Pages"
+  name = "Elements"
+  weight = 4
+  url = "elements/"
+  
+  [[menu.main]]
+  parent = "Pages"
+  name = "Privacy"
+  url = "privacy/"
+  weight = 5
+  
+  [[menu.main]]
+  parent = "Pages"
+  name = "Terms & Conditions"
+  url = "terms-conditions/"
+  weight = 6
 
 ############################# Footer Menu ########################
 [[menu.footer]]
@@ -143,13 +185,13 @@ url = "author/"
 weight = 2
 
 [[menu.footer]]
-name = "Categories"
-url = "categories/"
+name = "Privacy"
+url = "privacy/"
 weight = 3
 
 [[menu.footer]]
-name = "Tags"
-url = "tags/"
+name = "Terms & Conditions"
+url = "terms-conditions/"
 weight = 4
 
 # Social Icons

@@ -1,8 +1,14 @@
-+++
-title = "Zebra"
-image = "/images/author/zebra.png"
-description = "Zworld Creator"
+---
+title: "Zebra"
+image: "images/author/zebra.png"
+email: "zebrv.apps@gmail.com"
+date: 2021-02-02T10:20:19+06:00
+draft: false
+social:
+- icon: "lab la-github"
+  link: "https://github.com/xzebra"
+---
 
-+++
+Creator and currently solo-developer of zworld.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Student of Computer Science at University of Zaragoza (🇪🇸). Golang developer.
