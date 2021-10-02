@@ -18,7 +18,7 @@ jobs:
         uses: xzebra/notion-blog@master
         with:
           database-id: 'f887dfac795547ff97a81bb669b1052f'
-          content-folder: web/content
+          content-folder: web/content/blog
           images-folder: web/static/images/posts
           images-link: /images/posts
           archetype-file: web/themes/bookworm-light/archetypes/blog.md
