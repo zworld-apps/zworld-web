@@ -649,11 +649,11 @@ a.text-dark:hover {
 
 // footer
 footer {
-  background-color: $dark;
+  // background-color: $dark;
   .icon-box a {
-    color: rgba($white, .7);
+    color: rgba($dark, .7);
     &:hover {
-      color: $white;
+      // color: $white;
       background-color: $color-primary;
       border-color: $color-primary;
     }
@@ -661,7 +661,7 @@ footer {
 }
 .footer-menu {
   li a {
-    color: rgba($white, .7);
+    color: rgba($dark, .7);
     &:hover {
       color: $color-primary;
       text-decoration: underline;
@@ -669,8 +669,8 @@ footer {
   }
 }
 .copyright-text {
-  color: rgba($white, .7);
+  color: rgba($dark, .7);
   a {
-    color: rgba($white, .7);
+    color: rgba($dark, .7);
   }
 }
