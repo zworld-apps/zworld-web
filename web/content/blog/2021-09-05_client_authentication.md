@@ -1,9 +1,9 @@
 ---
 title: "Client authentication"
 description: ""
-image: ""
+image: "/images/posts/i.imgur.com_zI8WrkR.png"
 date: 2021-09-05T08:53:00+07:00
-lastmod: 2021-10-02T18:32:00+07:00
+lastmod: 2021-10-03T10:01:00+07:00
 author: "Zebra"
 tags:
 categories:
