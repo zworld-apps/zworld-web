@@ -7,7 +7,7 @@
         {{ if or (eq .Permalink (`tags/` | absURL)) (eq .Permalink (`categories/` | absURL)) }}
         <h3 class="mb-3 text-dark font-weight-bold">{{.Title | markdownify}}</h3>
         {{else}}
-        <h4 class="mb-3 text-dark font-weight-bold">Showing posts from <mark>{{.Title | markdownify}}</mark></h4>
+        <h4 class="mb-3 text-dark font-weight-bold">Showing posts with {{if (eq .Section "tags")}}tag{{else}}category{{end}} <mark>{{.Title | markdownify}}</mark></h4>
         {{ end }}
         {{ else }}
         <h3 class="mb-3 text-dark font-weight-bold">{{.Title | markdownify}}</h3>

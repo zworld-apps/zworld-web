@@ -5,6 +5,8 @@
     <div class="row justify-content-center text-center">
       <div class="col-12">
         <ul class="list-inline taxonomies-list">
+        {{ .Permalink }}<br>
+        {{ `tags/` | absURL }}<br>
         {{ if eq .Permalink (`tags/` | absURL)}}
         {{ range .Site.Taxonomies.tags }}
         <li class="list-inline-item mb-1">
@@ -12,6 +14,8 @@
         </li>
         {{ end }}
         {{ end }}
+        {{ .Permalink }}<br>
+        {{ `categories/` | absURL }}<br>
         {{ if eq .Permalink (`categories/` | absURL)}}
         {{ range .Site.Taxonomies.categories }}
         <li class="list-inline-item mb-1">
