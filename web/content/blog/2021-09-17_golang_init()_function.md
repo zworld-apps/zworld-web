@@ -1,9 +1,9 @@
 ---
 title: "Golang init() function"
 description: ""
-image: ""
+image: "/images/posts/i.imgur.com_z111iEy.png"
 date: 2021-09-17T11:05:00+07:00
-lastmod: 2021-10-02T18:32:00+07:00
+lastmod: 2021-10-03T22:13:00+07:00
 author: "Zebra"
 tags:
 categories:
