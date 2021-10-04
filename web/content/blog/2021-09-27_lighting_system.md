@@ -1,9 +1,9 @@
 ---
 title: "Lighting system"
 description: "Very simple lighting system with low graphics knowledge to give zworld a more interesting look."
-image: ""
+image: "/images/posts/i.imgur.com_2OprBJL.png"
 date: 2021-09-27T18:24:00+07:00
-lastmod: 2021-10-02T18:32:00+07:00
+lastmod: 2021-10-03T09:36:00+07:00
 author: "Zebra"
 tags:
   - "lights"
@@ -37,7 +37,7 @@ The main problem to solve was how to propagate light. As both resources mention,
 
 This effect looked blocky at first, because the texture I was drawing the lights to was the real size of the map. I tried to use multiple shaders to try to blur the shadows’ transitions, but they still looked blocky.
 
-![](/images/posts/41092085-B07E-4853-875C-ABCAF04B08C7.png)
+![](/images/posts/s3.us-west-2.amazonaws.com_41092085-B07E-4853-875C-ABCAF04B08C7.png)
 
 So I came up with the solution of relying on the GPU again. When you resize a texture, you can do it with a _nearest neighbour_ mode to keep the pixel-ness of the texture, but it can also be used the opposite way. One of the best ways to get a very neat blur on a texture is by scaling it with a _linear_ mode.
 
@@ -45,7 +45,7 @@ So I came up with the solution of relying on the GPU again. When you resize a te
 
 Once I came up with this, I changed the light map texture size to be 1 tile - 1 pixel. That way, when being resized, the lights will smooth themselves and we would use less resources to keep the texture stored and draw into it. The result is the way I expected lights to be.
 
-![](/images/posts/6ECF2468-F1CC-4C59-B9E6-0651CBE0D2F6.png)
+![](/images/posts/s3.us-west-2.amazonaws.com_6ECF2468-F1CC-4C59-B9E6-0651CBE0D2F6.png)
 
 ## Light diffusion
 
@@ -65,7 +65,7 @@ Light intensity (or at least how I called) is the property of light to expand mo
 
 Let’s think about magma or lava blocks. Lava emits light, enough to light its surroundings. But magma is rocks and lava mixed, so it should emit a timid light. This is where light intensity concept comes.
 
-![](/images/posts/7766C097-C986-4FCC-B306-24D2F5F89181.png)
+![](/images/posts/s3.us-west-2.amazonaws.com_7766C097-C986-4FCC-B306-24D2F5F89181.png)
 
 By modifying the lighting system to propagate the original light’s intensity in each step of the BFS, we can multiply the intensity ([0..1]) and the light drop-off ([0..1]). Meaning that a lower light intensity would increase the drop-off, making it harder for the light to propagate.
 
